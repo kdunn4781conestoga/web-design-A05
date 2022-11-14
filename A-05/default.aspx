@@ -4,11 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Hi-Lo Game</title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="PlayerNameForm" runat="server">
         <div>
+            Please enter your name:
+            <asp:TextBox ID="playerName" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="playerNameValidator" runat="server"
+                ControlToValidate="playerName" ErrorMessage="Please enter a value"/>
         </div>
     </form>
 </body>
