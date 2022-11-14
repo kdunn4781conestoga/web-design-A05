@@ -6,9 +6,10 @@
 <head runat="server">
     <title>Hi-Lo Game</title>
 </head>
-<body>
+<body bgcolor="darkred">
     <form id="form1" runat="server">
         <div>
+            Enter a number between 
         </div>
     </form>
 </body>

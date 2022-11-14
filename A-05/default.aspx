@@ -7,7 +7,7 @@
     <title>Hi-Lo Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body bgcolor="darkred">
     <form id="PlayerNameForm" runat="server">
         <div>
             Please enter your name:
