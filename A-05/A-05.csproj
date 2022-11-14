@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="gameEnd.aspx" />
+    <Content Include="gameLoop.aspx" />
+    <Content Include="maximumNumber.aspx" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -78,6 +81,27 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gameEnd.aspx.cs">
+      <DependentUpon>gameEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gameEnd.aspx.designer.cs">
+      <DependentUpon>gameEnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gameLoop.aspx.cs">
+      <DependentUpon>gameLoop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gameLoop.aspx.designer.cs">
+      <DependentUpon>gameLoop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maximumNumber.aspx.cs">
+      <DependentUpon>maximumNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maximumNumber.aspx.designer.cs">
+      <DependentUpon>maximumNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
