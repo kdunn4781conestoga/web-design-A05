@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Hi-Lo Game</title>
 </head>
-<body>
+<body bgcolor="darkred">
     <form id="PlayerNameForm" runat="server">
         <div>
             Please enter your name:
