@@ -17,7 +17,7 @@ namespace A_05
 {
     public partial class _maximumNumber : System.Web.UI.Page
     {
-        protected void Page_Init(object sender, EventArgs)
+        protected void Page_Init(object sender, EventArgs e)
         {
             Session.Clear();
         }
