@@ -19,7 +19,7 @@ namespace A_05
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            Session.Clear();
+            Session["maximumNumber"] = null;
         }
 
         protected void Page_Load(object sender, EventArgs e)
