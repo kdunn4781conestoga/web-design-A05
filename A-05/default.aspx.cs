@@ -17,21 +17,16 @@ namespace A_05
 
         protected void playerNameCustomValidator_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            if (Regex.IsMatch(args.Value, "[^a-zA-Z ]"))
-            {
-                args.IsValid = false;
-            }
-            else args.IsValid = true;
+            args.IsValid = !Regex.IsMatch(args.Value, "[^a-z ]", RegexOptions.IgnoreCase);
         }
 
         protected void submit_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
-                Server.Transfer("maximumNumber.aspx");
-            }
-            else
-            {
+                ViewState["playerName"] = playerName.Text;
+
+                Response.Redirect("maximumNumber.aspx");
             }
         }
     }

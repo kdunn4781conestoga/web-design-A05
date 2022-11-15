@@ -24,6 +24,15 @@ namespace A_05
         protected global::System.Web.UI.HtmlControls.HtmlForm PlayerNameForm;
 
         /// <summary>
+        /// playerNameLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label playerNameLbl;
+
+        /// <summary>
         /// playerName control.
         /// </summary>
         /// <remarks>
@@ -31,15 +40,6 @@ namespace A_05
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox playerName;
-
-        /// <summary>
-        /// submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
 
         /// <summary>
         /// playerNameRequiredValidator control.
@@ -58,5 +58,14 @@ namespace A_05
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator playerNameValidator;
+
+        /// <summary>
+        /// submitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitBtn;
     }
 }

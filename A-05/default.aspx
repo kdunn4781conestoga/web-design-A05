@@ -10,17 +10,18 @@
 <body>
     <form id="PlayerNameForm" runat="server">
         <div class="game">
-            Please enter your name:
+            <asp:Label ID="playerNameLbl" runat="server" AssociatedControlID="playerName">Enter your name</asp:Label>
             <asp:TextBox ID="playerName" runat="server"></asp:TextBox>
-            <asp:Button ID="submit" runat="server" CausesValidation="true" Text="Submit" OnClick="submit_Click"/>
-        </div>
-        <div class="error">          
             <asp:RequiredFieldValidator ID="playerNameRequiredValidator" runat="server"
-                ControlToValidate="playerName" ErrorMessage="This field is required. Please enter something, ANYTHING plz" />
+                Display="Dynamic" CssClass="error"
+                ControlToValidate="playerName" ErrorMessage="This field is required. Please enter something, ANYTHING plz"></asp:RequiredFieldValidator>
             <asp:CustomValidator ID="playerNameValidator" runat="server"
-                ControlToValidate="playerName" ErrorMessage="Invalid characters used in player name." 
-                OnServerValidate="playerNameCustomValidator_ServerValidate"/>
+                Display="Dynamic" CssClass="error"
+                ControlToValidate="playerName" ErrorMessage="Invalid characters used in player name."
+                OnServerValidate="playerNameCustomValidator_ServerValidate"></asp:CustomValidator>
+            <asp:Button ID="submitBtn" runat="server" CausesValidation="true" Text="Submit" OnClick="submit_Click"/>
         </div>
+        <br />
     </form>
 </body>
 </html>

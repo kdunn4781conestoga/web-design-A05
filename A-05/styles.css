@@ -1,10 +1,49 @@
 ﻿body {
     background-color: darkred;
-    color: white;
+    text-align:center;
 }
 .game {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     text-align: center;
-    padding-top: 50px;
+    background-color: whitesmoke;
+    width: 80vw;
+    height: fit-content;
+    border-radius: 20px;
+    border: 2px solid;
+    align-items: center;
+    overflow: hidden;
+    gap: 10px;
+    top: 50vh;
+    left:50vw;
+    transform: translate(-50%, -50%);
+}
+.game label {
+    display: block;
+    width: 100%;
+    background-color: red;
+    color:white;
+    border-bottom: 2px solid black;
+    font-family:'Segoe UI';
+    font-size: 25px;
+}
+.game input {
+    width: 90%;
+    padding: 5px;
+    margin: 0;
+}
+.game #submitBtn {
+    background-color: deepskyblue;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-top: 2px solid black;
+    width: 100%;
+}
+.game #submitBtn:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
 }
 .error {
     color: red;
