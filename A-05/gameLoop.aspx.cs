@@ -40,11 +40,10 @@ namespace A_05
 
             string playerName = Session["playerName"] as string;
             int? numberToGuess = Session["numberToGuess"] as int?;
+            int minimumNumber = 0;
+            int maximumNumber = 0;
 
-            if (IsPostBack)
-            {
-
-            }
+            userGuess.Attributes.Add("placeholder", "You must enter a number between " + minimumNumber + " and " + maximumNumber);
 
 
 

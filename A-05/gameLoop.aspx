@@ -11,7 +11,7 @@
     <form id="NumberGuessForm" runat="server" autocomplete="off">
         <div class="game">
             <asp:Label ID="guessLbl" runat="server" AssociatedControlID="userGuess" />
-            <asp:TextBox ID="userGuess" runat="server"/>
+            <asp:TextBox ID="userGuess" runat="server" placeholder ="hi"/>
             <asp:RequiredFieldValidator ID="userGuessRequiredValidator" runat="server"
                 Display="Dynamic" CssClass="error"
                 ControlToValidate="userGuess" 
