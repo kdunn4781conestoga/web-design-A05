@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* FILE			: default.aspx.cs
+* PROJECT		: Assignment 5
+* PROGRAMMERS	: Kyle Dunn, David Czachor
+* FIRST VERSION : 2022-11-15
+* DESCRIPTION	: This file handles all the events called by default.aspx
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -24,9 +32,9 @@ namespace A_05
         {
             if (Page.IsValid)
             {
-                ViewState["playerName"] = playerName.Text;
+                Session["playerName"] = playerName.Text;
 
-                Response.Redirect("maximumNumber.aspx");
+                Response.Redirect("maximumNumber.aspx", true);
             }
         }
     }

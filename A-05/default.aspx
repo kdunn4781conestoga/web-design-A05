@@ -1,4 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="A_05._default" %>
+﻿<!-- FILE          : default.aspx -->
+<!-- PROJECT       : Assignment 5 -->
+<!-- PROGRAMMERS   : Kyle Dunn, David Czachor -->
+<!-- FIRST VERSION : 2022-11-15 -->
+<!-- PURPOSE       :  This page validates user input for the player name -->
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="A_05._default" %>
 
 <!DOCTYPE html>
 
