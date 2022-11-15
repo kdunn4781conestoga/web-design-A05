@@ -24,7 +24,10 @@ namespace A_05
             }
 
             var rand = new Random();
-            Session["numberToGuess"] = rand.Next(2, maximumNumber + 1);
+            if (Session["numberToGuess"] == null)
+            {
+                Session["numberToGuess"] = rand.Next(2, maximumNumber + 1);
+            }
             Session["playerGuess"] = null;
 
             userGuessRangeValidator.MinimumValue = 2.ToString();
