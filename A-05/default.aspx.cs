@@ -12,19 +12,27 @@ namespace A_05
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
-            {
-
-            }
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void playerNameCustomValidator_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            if (Regex.IsMatch(args.Value, "^[a-z,A-Z]"))
+            if (Regex.IsMatch(args.Value, "[^a-zA-Z ]"))
             {
                 args.IsValid = false;
             }
             else args.IsValid = true;
+        }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                Server.Transfer("maximumNumber.aspx");
+            }
+            else
+            {
+            }
         }
     }
 }

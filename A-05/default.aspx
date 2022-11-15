@@ -12,7 +12,14 @@
         <div class="game">
             Please enter your name:
             <asp:TextBox ID="playerName" runat="server"></asp:TextBox>
-            <asp:Button ID="submit" runat="server" CausesValidation="true" Text="Submit" />
+            <asp:Button ID="submit" runat="server" CausesValidation="true" Text="Submit" OnClick="submit_Click"/>
+        </div>
+        <div class="error">          
+            <asp:RequiredFieldValidator ID="playerNameRequiredValidator" runat="server"
+                ControlToValidate="playerName" ErrorMessage="This field is required. Please enter something, ANYTHING plz" />
+            <asp:CustomValidator ID="playerNameValidator" runat="server"
+                ControlToValidate="playerName" ErrorMessage="Invalid characters used in player name." 
+                OnServerValidate="playerNameCustomValidator_ServerValidate"/>
         </div>
     </form>
 </body>
