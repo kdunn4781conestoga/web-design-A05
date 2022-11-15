@@ -20,11 +20,12 @@
             <asp:TextBox ID="playerName" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="playerNameRequiredValidator" runat="server"
                 Display="Dynamic" CssClass="error"
-                ControlToValidate="playerName" ErrorMessage="This field is required. Please enter something, ANYTHING plz"></asp:RequiredFieldValidator>
-            <asp:CustomValidator ID="playerNameValidator" runat="server"
+                ControlToValidate="playerName" ErrorMessage="This field is required. Please enter something, ANYTHING plz" />
+            <asp:RegularExpressionValidator ID="playerNameRegExValidator" runat="server"
                 Display="Dynamic" CssClass="error"
-                ControlToValidate="playerName" ErrorMessage="Invalid characters used in player name."
-                OnServerValidate="playerNameCustomValidator_ServerValidate"></asp:CustomValidator>
+                ControlToValidate="playerName" 
+                ValidationExpression="^[a-zA-Z ]*$"
+                ErrorMessage="Invalid characters used in player name." />
             <asp:Button ID="submitBtn" runat="server" CausesValidation="true" Text="Submit" OnClick="submit_Click"/>
         </div>
         <br />

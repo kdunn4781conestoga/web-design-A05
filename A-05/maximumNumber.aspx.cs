@@ -17,6 +17,11 @@ namespace A_05
 {
     public partial class _maximumNumber : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs)
+        {
+            Session.Clear();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
@@ -29,7 +34,7 @@ namespace A_05
             }
             else
             {
-                maxNumberLbl.Text = $"Welcome {playerName}<br />Enter Maximum Number";
+                maxNumberLbl.Text = $"<b>Welcome {playerName}</b><br />Enter Maximum Number";
             }
         }
 

@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <form id="MaximumNumberForm" runat="server">
+    <form id="MaximumNumberForm" runat="server" autocomplete="off">
         <div class="game">
             <asp:Label ID="maxNumberLbl" runat="server" AssociatedControlID="maxNumber" />
-            <asp:TextBox ID="maxNumber" runat="server"></asp:TextBox>
+            <asp:TextBox ID="maxNumber" runat="server" placeholder="Number between 2 and 1,000,000"/>
             <asp:RequiredFieldValidator ID="maxNumberRequiredValidator" runat="server"
                 Display="Dynamic" CssClass="error"
                 ControlToValidate="maxNumber" 
@@ -26,9 +26,9 @@
                 Display="Dynamic" CssClass="error"
                 ControlToValidate="maxNumber"
                 Type="Integer"
-                MinimumValue="1"
+                MinimumValue="2"
                 MaximumValue="1000000"
-                ErrorMessage="This field is out of range. Please enter a range between 1 and 1,000,000." />
+                ErrorMessage="Invalid maximum number.<br/>Please enter a valid number between the range of <b>2</b> and <b>1,000,000</b>." />
             <asp:Button ID="submitBtn" runat="server" CausesValidation="true" Text="Submit" OnClick="submitBtn_Click"/>
         </div>
     </form>

@@ -23,11 +23,6 @@ namespace A_05
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
-        protected void playerNameCustomValidator_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-            args.IsValid = !Regex.IsMatch(args.Value, "[^a-z ]", RegexOptions.IgnoreCase);
-        }
-
         protected void submit_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
