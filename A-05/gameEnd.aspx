@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
+    <form id="EndGameForm" runat="server">
+        <div class="game">
+            <asp:Label ID="winner" runat="server">You are a WINNER!</asp:Label>
+            <asp:Button ID="submitBtn" runat="server" CausesValidation="true" Text="Play Again" PostBackUrl="~/maximumNumber.aspx"/>
         </div>
     </form>
 </body>
