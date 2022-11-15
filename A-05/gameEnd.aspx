@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Hi-Lo Game</title>
 </head>
-<body bgcolor="green">
+<body>
     <form id="form1" runat="server">
         <div>
         </div>

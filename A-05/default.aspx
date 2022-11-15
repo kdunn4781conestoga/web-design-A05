@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Hi-Lo Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"/>
 </head>
-<body bgcolor="darkred">
+<body>
     <form id="PlayerNameForm" runat="server">
-        <div>
+        <div class="game">
             Please enter your name:
             <asp:TextBox ID="playerName" runat="server"></asp:TextBox>
             <asp:Button ID="submit" runat="server" CausesValidation="true" Text="Submit" />
