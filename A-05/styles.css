@@ -1,4 +1,8 @@
 ﻿body {
-    background-color: blue;
+    background-color: darkred;
     color: white;
+}
+.game {
+    text-align: center;
+    padding-top: 50px;
 }
