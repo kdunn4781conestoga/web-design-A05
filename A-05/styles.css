@@ -2,6 +2,9 @@
     background-color: darkred;
     text-align:center;
 }
+body#winnerBody {
+    background-color: darkgreen;
+}
 .game {
     display: flex;
     flex-direction: column;
@@ -19,7 +22,7 @@
     left:50vw;
     transform: translate(-50%, -50%);
 }
-.game label {
+.game label, span#winner {
     display: block;
     width: 100%;
     background-color: red;
@@ -27,6 +30,9 @@
     border-bottom: 2px solid black;
     font-family:'Segoe UI';
     font-size: 25px;
+}
+.game span#winner {
+    font-size: 35px;
 }
 .game input {
     width: 90%;
@@ -47,4 +53,12 @@
 }
 .error {
     color: red;
+}
+#starImg {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

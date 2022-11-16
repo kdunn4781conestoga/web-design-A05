@@ -15,6 +15,15 @@ namespace A_05
     {
 
         /// <summary>
+        /// winnerBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl winnerBody;
+
+        /// <summary>
         /// EndGameForm control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace A_05
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm EndGameForm;
+
+        /// <summary>
+        /// starImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image starImg;
 
         /// <summary>
         /// winner control.

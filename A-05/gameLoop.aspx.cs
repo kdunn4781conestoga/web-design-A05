@@ -29,7 +29,7 @@ namespace A_05
             int minimumNumber = 0;
             if (Session["minimumNumber"] == null || !Int32.TryParse(Session["minimumNumber"].ToString(), out minimumNumber))
             {
-                minimumNumber = 2;
+                minimumNumber = 1;
                 Session["minimumNumber"] = minimumNumber;
             }
 
@@ -53,20 +53,23 @@ namespace A_05
 
                 if (guess < numberToGuess)
                 {
-                    minimumNumber = guess;
+                    minimumNumber = guess + 1;
                     Session["minimumNumber"] = minimumNumber;
                 }
                 else if (guess > numberToGuess)
                 {
-                    maximumNumber = guess;
+                    maximumNumber = guess - 1;
                     Session["maximumNumber"] = maximumNumber;
                 }
             }
 
+            string rangeMessage = "You must enter a number between " + minimumNumber + " and " + maximumNumber;
+
             userGuessRangeValidator.MinimumValue = minimumNumber.ToString();
             userGuessRangeValidator.MaximumValue = maximumNumber.ToString();
+            userGuessRangeValidator.ErrorMessage = $"Incorrect Range. {rangeMessage}";
 
-            userGuess.Attributes.Add("placeholder", "You must enter a number between " + minimumNumber + " and " + maximumNumber);
+            userGuess.Attributes.Add("placeholder", rangeMessage);
 
             guessLbl.Text = $"<b>{playerName}</b><br />Please enter your guess.";
 
