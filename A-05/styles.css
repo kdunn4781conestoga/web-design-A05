@@ -1,6 +1,13 @@
-﻿body {
+﻿/*
+FILE : styles.css
+PROJECT : Assignment 5
+PROGRAMMERS : Kyle Dunn, David Czachor
+FIRST VERSION : 2022-11-15
+PURPOSE : This page is the styling for the webapp
+*/
+body {
     background-color: darkred;
-    text-align:center;
+    text-align: center;
 }
 body#winnerBody {
     background-color: darkgreen;
