@@ -1,4 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gameEnd.aspx.cs" Inherits="A_05.gameEnd" %>
+﻿<!-- FILE          : gameEnd.aspx -->
+<!-- PROJECT       : Assignment 5 -->
+<!-- PROGRAMMERS   : Kyle Dunn, David Czachor -->
+<!-- FIRST VERSION : 2022-11-15 -->
+<!-- PURPOSE       : This page shows the win screen to the user -->
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gameEnd.aspx.cs" Inherits="A_05.gameEnd" %>
 
 <!DOCTYPE html>
 

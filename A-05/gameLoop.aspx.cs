@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+* FILE			: gameLoop.aspx.cs
+* PROJECT		: Assignment 5
+* PROGRAMMERS	: Kyle Dunn, David Czachor
+* FIRST VERSION : 2022-11-15
+* DESCRIPTION	: This file handles all the events called by gameLoop.aspx
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -14,18 +22,21 @@ namespace A_05
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
+            // Checks for player name
             string playerName = Session["playerName"] as string;
             if (string.IsNullOrEmpty(playerName))
             {
                 Response.Redirect("default.aspx");
             }
 
+            // Checks for maximum number
             int maximumNumber = 0;
             if (Session["maximumNumber"] == null || !Int32.TryParse(Session["maximumNumber"].ToString(), out maximumNumber))
             {
                 Response.Redirect("maximumNumber.aspx");
             }
 
+            // Checks for minimum number
             int minimumNumber = 0;
             if (Session["minimumNumber"] == null || !Int32.TryParse(Session["minimumNumber"].ToString(), out minimumNumber))
             {
@@ -33,6 +44,7 @@ namespace A_05
                 Session["minimumNumber"] = minimumNumber;
             }
 
+            // Checks for number to guess
             int numberToGuess = 0;
             if (Session["numberToGuess"] == null || !Int32.TryParse(Session["numberToGuess"].ToString(), out numberToGuess))
             {
@@ -51,6 +63,7 @@ namespace A_05
             {
                 int.TryParse(userGuess.Text, out int guess);
 
+                // Modifies the minimumNumber and maximumNumber if the number guessed is less than or greater than the number to guess
                 if (guess < numberToGuess)
                 {
                     minimumNumber = guess + 1;
@@ -63,6 +76,7 @@ namespace A_05
                 }
             }
 
+            // Modify the range of the validator
             string rangeMessage = "You must enter a number between " + minimumNumber + " and " + maximumNumber;
 
             userGuessRangeValidator.MinimumValue = minimumNumber.ToString();
@@ -75,6 +89,7 @@ namespace A_05
 
             Debug.WriteLine($"Number to guess is {numberToGuess}");
         }
+
         protected void submitBtn_Click(object sender, EventArgs e)
         {
             if (IsValid)
@@ -82,6 +97,7 @@ namespace A_05
                 int.TryParse(userGuess.Text, out int guess);
                 int.TryParse(Session["numberToGuess"].ToString(), out int numberToGuess);
 
+                // Redirect to win page if the user guessed the number
                 if (guess == numberToGuess)
                 {
                     Session["playerGuess"] = userGuess.Text;

@@ -1,4 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gameLoop.aspx.cs" Inherits="A_05.gameLoop" %>
+﻿<!-- FILE          : gameLoop.aspx -->
+<!-- PROJECT       : Assignment 5 -->
+<!-- PROGRAMMERS   : Kyle Dunn, David Czachor -->
+<!-- FIRST VERSION : 2022-11-15 -->
+<!-- PURPOSE       : This page performs the game loop of prompting the user to guess and number. They will guess until they win -->
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gameLoop.aspx.cs" Inherits="A_05.gameLoop" %>
 
 <!DOCTYPE html>
 
