@@ -11,7 +11,7 @@
     <form id="EndGameForm" runat="server">
         <div class="game">
             <asp:Label ID="winner" runat="server">You are a WINNER!</asp:Label>
-            <asp:Button ID="submitBtn" runat="server" CausesValidation="true" Text="Play Again" PostBackUrl="~/maximumNumber.aspx"/>
+            <asp:Button ID="submitBtn" runat="server" Text="Play Again" OnClick="submitBtn_Click" />
         </div>
     </form>
 </body>

@@ -20,7 +20,7 @@
                 Display="Dynamic" CssClass="error"
                 ControlToValidate="userGuess"
                 Type="Integer" />
-            <asp:Button ID="submitBtn" runat="server" CausesValidation="true" Text="Submit" OnClick="submitBtn_Click"/>
+            <asp:Button ID="submitBtn" runat="server" Text="Submit" OnClick="submitBtn_Click"/>
         </div>
     </form>
 </body>

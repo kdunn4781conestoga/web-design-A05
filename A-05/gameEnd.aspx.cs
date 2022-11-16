@@ -9,12 +9,14 @@ namespace A_05
 {
     public partial class gameEnd : System.Web.UI.Page
     {
-        protected void Page_Unload(object sender, EventArgs e)
+        protected void submitBtn_Click(object sender, EventArgs e)
         {
             string playerName = Session["playerName"] as string;
             Session.Clear();
 
             Session["playerName"] = playerName;
+
+            Response.Redirect("maximumNumber.aspx");
         }
     }
 }

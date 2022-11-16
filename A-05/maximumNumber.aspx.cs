@@ -28,7 +28,7 @@ namespace A_05
 
             string playerName = Session["playerName"] as string;
 
-            if (playerName == null || playerName.Trim().Length == 0)
+            if (string.IsNullOrEmpty(playerName))
             {
                 Response.Redirect("default.aspx");
             }
