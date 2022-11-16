@@ -54,6 +54,8 @@ namespace A_05
                 Session["numberToGuess"] = numberToGuess;
             }
 
+            userGuessRangeValidator.MinimumValue = minimumNumber.ToString();
+            userGuessRangeValidator.MaximumValue = maximumNumber.ToString();
 
             if (!IsPostBack)
             {
@@ -79,11 +81,8 @@ namespace A_05
             // Modify the range of the validator
             string rangeMessage = "You must enter a number between " + minimumNumber + " and " + maximumNumber;
 
-            userGuessRangeValidator.MinimumValue = minimumNumber.ToString();
-            userGuessRangeValidator.MaximumValue = maximumNumber.ToString();
-            userGuessRangeValidator.ErrorMessage = $"Incorrect Range. {rangeMessage}";
-
             userGuess.Attributes.Add("placeholder", rangeMessage);
+            userGuessRangeValidator.ErrorMessage = $"Incorrect Range. {rangeMessage}";
 
             guessLbl.Text = $"<b>{playerName}</b><br />Please enter your guess.";
 
